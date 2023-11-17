@@ -1,0 +1,50 @@
+body {
+    margin: 5%;
+    padding: 0;
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+}
+
+.menu {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.menu > ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; /* Ajout pour permettre le retour à la ligne des éléments */
+    justify-content: center; /* Ajout pour centrer les éléments */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: block;
+}
+
+.content {
+    font-size: 25px;
+}
+
+.submit {
+    font-size: 20px;
+}

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ubuntu:ital,wght@1,500&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column; /* Ajout pour aligner les éléments en colonne */
+    align-items: center; /* Ajout pour aligner les éléments au centre */
+}
+
+.menu {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.menu > ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; /* Ajout pour permettre le retour à la ligne des éléments */
+    justify-content: center; /* Ajout pour centrer les éléments */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: block;
+}
+
+.titre {
+    color: white;
+    text-align: center;
+    font-size: 40.5px;
+    padding: 40px 20px; /* Modification pour déplacer légèrement le titre vers le bas */
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column; /* Modifier pour aligner les éléments en colonne */
+    align-items: center; /* Modifier pour aligner les éléments au centre */
+    overflow-y: auto; /* Ajout pour activer le défilement vertical */
+    max-height: 400px; /* Modifier pour définir la hauteur maximale de la section de news */
+    margin-top: 20px; /* Modification pour déplacer légèrement les news vers le bas */
+}
+
+.news {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    color: #000;
+    width: 400px;
+    flex-shrink: 0; /* Modifier pour empêcher le rétrécissement des éléments */
+}
+
+.news-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.news-content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Styles spécifiques pour les appareils mobiles */
+@media only screen and (max-width: 480px) {
+
+    .titre {
+        font-size: 24px;
+        padding: 20px;
+        text-align: center; /* Centre le texte */
+    }
+
+    .menu {
+        font-size: 16px; /* Réduire la taille de police du menu sur mobile */
+    }
+
+    .news-container {
+        overflow-y: scroll; /* Ajouter une barre de défilement verticale pour les actualités */
+        height: 200px; /* Définir une hauteur fixe pour limiter la zone de défilement */
+        -webkit-overflow-scrolling: touch; /* Activer le défilement fluide sur les appareils iOS */
+    }
+
+    .news {
+        padding: 10px;
+        width: 90%; /* Ajuste la largeur en pourcentage */
+        margin: 10px; /* Centrer les actualités horizontalement */
+    }
+    
+    body {
+        overflow: auto; /* Activer le défilement sur la version mobile */
+    }
+}
+
+/* Styles spécifiques pour les ordinateurs */
+@media only screen and (max-width: 1924px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: "Ubuntu", sans-serif;
+        overflow: hidden; /* EmpÃªche le dÃ©filement de la page */
+        background-color: rgb(0, 0, 0);
+        display: flex; /* Ajout de cette propriÃ©tÃ© */
+        align-items: center; /* Ajout de cette propriÃ©tÃ© */
+        justify-content: center; /* Ajout de cette propriÃ©tÃ© */
+    }
+    
+    .menu {
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        font-size: 22px;
+    }
+    
+    .menu > ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    .menu li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+        display: block;
+    }
+    
+    .titre {
+        color: white;
+        text-align: center;
+        font-size: 40.5px;
+        position: absolute;
+        top: 30%; /* Ajustez la valeur du pourcentage selon vos besoins */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .news-container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .news {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 50px;
+        margin: 10px;
+        color: #000;
+        width: 400px;
+        display: inline-block;
+        top: 30%; /* Ajustez la valeur du pourcentage selon vos besoins */
+        left: 50%;
+        transform: translate(0%, 60%);
+    }
+    
+    .news-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .news-date {
+        color: #888;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .news-content {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
